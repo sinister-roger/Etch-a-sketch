@@ -9,9 +9,8 @@ for (let i = 1; i <= 256; i++) {
 
     container.appendChild(div); 
 }
-container.addEventListener("mousemove", () => {
-    
-    
+container.addEventListener("mouseover", (e) => {
+    e.target.style.backgroundColor = "red"; 
 })
 
 
