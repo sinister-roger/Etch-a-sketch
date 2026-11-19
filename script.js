@@ -3,7 +3,7 @@ const container = document.querySelector("#container");
 
 
 container.addEventListener("mouseover", (e) => {
-    e.target.style.backgroundColor = "red"; 
+    e.target.style.backgroundColor = "rgb(256 0 0 / 80%)"; 
 })
 
 const button = document.querySelector("button"); 
@@ -42,8 +42,11 @@ button.addEventListener("click", () => {
         container.replaceChildren(); 
         
         for (let i = 1; i <= (userInput*userInput); i++) {
+            let red = (Math.floor(Math.random()*256))
+            let green = (Math.floor(Math.random()*256))
+            let blue = (Math.floor(Math.random()*256))
             const div = document.createElement("div"); 
-            div.style.backgroundColor = "green";
+            div.style.backgroundColor = `rgb(${red}, ${green}, ${blue})`;
             div.style.height = `${960/userInput}px`
             div.style.width = `${960/userInput}px`
             
